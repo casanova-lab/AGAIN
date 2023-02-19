@@ -35,7 +35,6 @@ Due to the file size limit in GitHub, please download the [AGAIN reference datas
   - GENE: gene symbol
   - TRANSCRIPT_IVS: ENST123456789_IVS10
   - CANONICAL: canonical transcript_IVS, or '.'
-
   - AGAIN_ZONE: ZONE1/ZONE2, ZONE1 is from 1st BP to ACC, ZONE2 is from 2nd BP to 1st BP
   - AGAIN_YAG: YES/NO, if the AG-gain variant also fits YAG
   - AGAIN_BP_DIST: the distance from the created AG to BP

@@ -2,13 +2,13 @@
 Genome-wide detection of human intronic AG-gain variants between the splicing branchpoint and canonical acceptor site
 
 ## Introduction
-- Human variants that introduce an AG in the intronic region between the branchpoint (BP) and the canonical acceptor site (ACC) of protein-coding genes can disrupt pre-mRNA splicing. 
+- Human variants that introduce an AG in the intronic region between the branchpoint (BP) and the canonical acceptor site (ACC) of protein-coding genes can disrupt pre-mRNA splicing.
 
-- Based on our previously developed BPHunter database and software, we precisely delineate the BP-ACC segments of all human introns, for the first time. We find an extreme depletion of AG/YAG in the [BP+8, ACC-4] region. 
+- Based on our previously developed BPHunter ([github](https://github.com/casanova-lab/BPHunter) and [webserver](https://hgidsoft.rockefeller.edu/BPHunter)), we precisely delineate the BP-ACC segments of all human introns, for the first time. We find an extreme depletion of AG/YAG in the [BP+8, ACC-4] region. 
 
 - AGAIN is a genome-wide approach to pinpoint intronic AG-gain variants (SNVs, insertions, deletions) in the BP-ACC region of human genomes. AGAIN also predicts protein-level outcomes resulting from two major missplicing consequences (new acceptor site & complete exon skipping).
 
-- This standalone version can be easily implemented into NGS analysis by a one-line command. We also provided a [AGAIN webserver](http://hgidsoft.rockefeller.edu/AGAIN) with user-friendly interface.
+- This standalone version can be easily implemented into NGS analysis by a one-line command. We also provided the [AGAIN webserver](http://hgidsoft.rockefeller.edu/AGAIN) with user-friendly interface.
 
 ## News
 - Feb 2023: AGAIN webserver & github was launched.
@@ -22,8 +22,6 @@ The code is written in [python3](https://www.python.org/downloads/), and require
 
 ### Reference datasets
 Due to the file size limit in GitHub, please download the [AGAIN reference datasets](http://hgidsoft.rockefeller.edu/AGAIN/standalone.html) and put them into your AGAIN folder.
-
-To use the latest version-2, please download and replace the reference datasets.
 
 ### File Format
 **Input:** Variants in VCF format, with 5 mandatory and tab-delimited fields (CHROM, POS, ID, REF, ALT).

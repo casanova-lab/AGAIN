@@ -1,5 +1,5 @@
 # AGAIN
-Genome-wide detection of AG-gain variants between the splicing branchpoint and canonical acceptor site in human introns
+Genome-wide detection of human intronic AG-gain variants between the splicing branchpoint and canonical acceptor site
 
 ## Introduction
 - Human variants that introduce an AG in the intronic region between the branchpoint (BP) and the canonical acceptor site (ACC) of protein-coding genes can disrupt pre-mRNA splicing. 

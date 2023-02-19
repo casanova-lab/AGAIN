@@ -24,11 +24,10 @@ The code is written in [python3](https://www.python.org/downloads/), and require
 Due to the file size limit in GitHub, please download the [AGAIN reference datasets](http://hgidsoft.rockefeller.edu/AGAIN/standalone.html) and put them into your AGAIN folder.
 
 ### File Format
-**Input:** Variants in VCF format, with 5 mandatory and tab-delimited fields (CHROM, POS, ID, REF, ALT).
-  - The 48 published pathogenic BP variants are provided as the example input. (Example_var_BP.vcf)
+**Input:** Variants in VCF format, with 5 mandatory and tab-delimited fields (CHROM, POS, ID, REF, ALT), (Example_var_AGgain.vcf)
 
 **Output:** AGAIN-detected variants will be output with the following annotations.
-  - SAMPLE (only for BPHunter_VCF_batch.py)
+  - SAMPLE (only for AGAIN_VCF_batch.py)
   - CHROM, POS, ID, REF, ALT (exactly the same as input)
   - STRAND: +/-
   - VAR_TYPE: snv, x-nt del, x-nt ins
@@ -77,7 +76,7 @@ Parameter | Type | Description | Default
 *-g*|str|human reference genome assembly (GRCh37 / GRCh38)|GRCh37
 *-t*|str|all / canonical transcripts?|all
 
-### BPHunter Scoring Scheme
+### AGAIN Scoring Scheme
 <img src="https://hgidsoft.rockefeller.edu/AGAIN/img/AGAIN_Scoring.jpg" width="33%" height="33%">
 
 ## Reference

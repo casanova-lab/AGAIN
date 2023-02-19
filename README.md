@@ -78,7 +78,7 @@ Parameter | Type | Description | Default
 *-t*|str|all / canonical transcripts?|all
 
 ### BPHunter Scoring Scheme
-<img src="https://hgidsoft.rockefeller.edu/AGAIN/img/AGAIN_Scoring.jpg" width="50%" height="50%">
+<img src="https://hgidsoft.rockefeller.edu/AGAIN/img/AGAIN_Scoring.jpg" width="33%" height="33%">
 
 ## Reference
 - ***Zhang P. et al.*** Genome-wide detection of human intronic AG-gain variants between the splicing branchpoint and canonical acceptor site. 2023.

@@ -35,19 +35,20 @@ Due to the file size limit in GitHub, please download the [AGAIN reference datas
   - GENE: gene symbol
   - TRANSCRIPT_IVS: ENST123456789_IVS10
   - CANONICAL: canonical transcript_IVS, or '.'
-  - BP_NAME: m/e/cBP_chrom_pos_strand_nucleotide
-  - BP_ACC_DIST: distance from BP to acceptor site
-  - BP_RANK: rank of BP in this intron
-  - BP_TOTAL: total number of BP in this intron
-  - BP_HIT: BP position (-2, -1, 0) hit by the variant 
-  - BP_SOURCE: number of sources supporting this BP position
-  - CONSENSUS: level of consensus (1:YTNAY, 2:YTNA, 3:TNA, 4:YNA, 0:none)
-  - BP/BP2_GERP: conservation score GERP for BP and BP-2 positions
-  - BP/BP2_PHYL: conservation score PHYLOP for BP and BP-2 positions
-  - BPHunter_HIGHRISK: YES/NO if a BP variant considered as high-risk
-  - BPHunter_SCORE: score of a BP variant (suggested cutoff>=3, max=10)
 
-### Command & Parameters (BPHunter_VCF.py)
+  - AGAIN_ZONE: ZONE1/ZONE2, ZONE1 is from 1st BP to ACC, ZONE2 is from 2nd BP to 1st BP
+  - AGAIN_YAG: YES/NO, if the AG-gain variant also fits YAG
+  - AGAIN_BP_DIST: the distance from the created AG to BP
+  - AGAIN_ACC_DIST: the distance from the created AG to ACC
+  - AGAIN_HIGHRISK: YES/NO, if the AG-gain variant falls inside high-risk [BP+8, ACC-4] region
+  - AGAIN_SCORE: score of the AG-gain variant (suggested cutoff >= 3, max = 5)
+  - PROT_SEQ_WT: wild-type protein sequence
+  - PROT_SEQ_NEW_ACC: consequent protein sequence if new acceptor site is created
+  - HGVS_NEW_ACC: protein-level HGVS annotation if new acceptor site is created
+  - PROT_SEQ_EXON_SKIP: consequent protein sequence if exon skipping occurs
+  - HGVS_EXON_SKIP: protein-level HGVS annotation if exon skipping occurs
+
+### Command & Parameters (AGAIN_VCF.py)
 ```
 python AGAIN_VCF.py -i variants.vcf
 ```
@@ -61,7 +62,7 @@ Parameter | Type | Description | Default
 *-g*|str|human reference genome assembly (GRCh37 / GRCh38)|GRCh37
 *-t*|str|all / canonical transcripts?|all
 
-### Command & Parameters (BPHunter_VCF_batch.py)
+### Command & Parameters (AGAIN_VCF_batch.py)
 ```
 python AGAIN_VCF_batch.py -d /dir -s samplelist.txt -o output.txt
 ```
@@ -78,7 +79,7 @@ Parameter | Type | Description | Default
 *-t*|str|all / canonical transcripts?|all
 
 ### BPHunter Scoring Scheme
-<img src="https://hgidsoft.rockefeller.edu/AGAIN/img/AGAIN_Scoring.jpg" width="70%" height="70%">
+<img src="https://hgidsoft.rockefeller.edu/AGAIN/img/AGAIN_Scoring.jpg" width="50%" height="50%">
 
 ## Reference
 - ***Zhang P. et al.*** Genome-wide detection of human intronic AG-gain variants between the splicing branchpoint and canonical acceptor site. 2023.

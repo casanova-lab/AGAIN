@@ -62,10 +62,10 @@ Parameter | Type | Description | Default
 
 ### Command & Parameters (AGAIN_VCF_batch.py)
 ```
-python AGAIN_VCF_batch.py -d directory -s samplelist.txt -o output.txt
+python AGAIN_VCF_batch.py -d directory -s samplelist.txt -o output.csv
 ```
 ```
-python AGAIN_VCF_batch.py -g GRCh37 -t all -d directory -s samplelist.txt -o output.txt
+python AGAIN_VCF_batch.py -g GRCh37 -t all -d directory -s samplelist.txt -o output.csv
 ```
 
 Parameter | Type | Description | Default
@@ -74,7 +74,7 @@ Parameter | Type | Description | Default
 *-t*|str|all / canonical transcripts?|all
 *-d*|str|directory of VCF files|N.A.
 *-s*|file|sample list (without .vcf extension) in the above directory|N.A.
-*-o*|str|output filename|N.A.
+*-o*|str|output filename in csv|N.A.
 
 ### AGAIN Scoring Scheme
 <img src="https://hgidsoft.rockefeller.edu/AGAIN/img/AGAIN_Score.png" width="40%" height="40%">

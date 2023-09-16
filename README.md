@@ -24,7 +24,7 @@ The code is written in [python3](https://www.python.org/downloads/), and require
 Due to the data limit in GitHub, please download the [AGAIN reference datasets](http://hgidsoft.rockefeller.edu/AGAIN/standalone.html) and put them into your AGAIN folder.
 
 ### File Format
-**Input:** Variants in VCF format, with 5 mandatory and tab-delimited fields (CHROM, POS, ID, REF, ALT), (Example_var_AGgain.vcf)
+**Input:** Variants in VCF format, with 5 mandatory and tab-delimited fields (CHROM, POS, ID, REF, ALT), (Sample_variants.vcf)
 
 **Output:** AGAIN-detected variants will be output with the following annotations.
   - SAMPLE (only for AGAIN_VCF_batch.py)

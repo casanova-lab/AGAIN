@@ -77,7 +77,7 @@ Parameter | Type | Description | Default
 *-o*|str|output filename|N.A.
 
 ### AGAIN Scoring Scheme
-<img src="https://hgidsoft.rockefeller.edu/AGAIN/img/AGAIN_Score.jpg" width="33%" height="33%">
+<img src="https://hgidsoft.rockefeller.edu/AGAIN/img/AGAIN_Score.png" width="33%" height="33%">
 
 ## Reference
 - ***Zhang P. et al.*** Genome-wide detection of human intronic AG-gain variants located between the splicing branchpoint and canonical splice acceptor site. 2023.

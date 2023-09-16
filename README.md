@@ -4,7 +4,7 @@ Genome-wide detection of human intronic AG-gain variants between the splicing br
 ## Introduction
 - Human variants that introduce an AG in the intronic region between the branchpoint (BP) and the canonical splice acceptor site (ACC) of protein-coding genes can disrupt pre-mRNA splicing.
 
-- Based on our previously developed BPHunter ([github](https://github.com/casanova-lab/BPHunter) and [webserver](https://hgidsoft.rockefeller.edu/BPHunter)), we precisely delineate the BP-ACC segments of all human introns, for the first time. We find an extreme depletion of AG/YAG in the [BP+8, ACC-4] region. 
+- Based on our previously developed BPHunter ([GitHub](https://github.com/casanova-lab/BPHunter) and [webserver](https://hgidsoft.rockefeller.edu/BPHunter)), we precisely delineate the BP-ACC segments of all human introns of protein-coding genes, for the first time. We find an extreme depletion of AG/YAG in the high-risk [BP+8, ACC-4] region. 
 
 - AGAIN is a genome-wide approach to pinpoint intronic AG-gain variants (SNVs, insertions, deletions) in the BP-ACC region of human genomes. AGAIN also predicts protein-level outcomes resulting from two major missplicing consequences (new acceptor site & complete exon skipping).
 

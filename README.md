@@ -51,30 +51,30 @@ Due to the data limit in GitHub, please download the [AGAIN reference datasets](
 python AGAIN_VCF.py -i Sample_variants.vcf
 ```
 ```
-python AGAIN_VCF.py -i Sample_variants.vcf -g GRCh37 -t all
+python AGAIN_VCF.py -g GRCh37 -t all -i Sample_variants.vcf
 ```
 
 Parameter | Type | Description | Default
 ----------|------|-------------|--------------
-*-i*|file|variants in VCF format, with 5 fields (CHROM, POS, ID, REF, ALT)|N.A.
 *-g*|str|human reference genome assembly (GRCh37 / GRCh38)|GRCh37
 *-t*|str|all / canonical transcripts?|all
+*-i*|file|variants in VCF format, with 5 fields (CHROM, POS, ID, REF, ALT)|N.A.
 
 ### Command & Parameters (AGAIN_VCF_batch.py)
 ```
 python AGAIN_VCF_batch.py -d directory -s samplelist.txt -o output.txt
 ```
 ```
-python AGAIN_VCF_batch.py -d directory -s samplelist.txt -o output.txt -g GRCh37 -t all
+python AGAIN_VCF_batch.py -g GRCh37 -t all -d directory -s samplelist.txt -o output.txt
 ```
 
 Parameter | Type | Description | Default
 ----------|------|-------------|--------------
+*-g*|str|human reference genome assembly (GRCh37 / GRCh38)|GRCh37
+*-t*|str|all / canonical transcripts?|all
 *-d*|str|directory of VCF files|N.A.
 *-s*|file|sample list (without .vcf extension) in the above directory|N.A.
 *-o*|str|output filename|N.A.
-*-g*|str|human reference genome assembly (GRCh37 / GRCh38)|GRCh37
-*-t*|str|all / canonical transcripts?|all
 
 ### AGAIN Scoring Scheme
 <img src="https://hgidsoft.rockefeller.edu/AGAIN/img/AGAIN_Scoring.jpg" width="33%" height="33%">

@@ -1,19 +1,19 @@
 # AGAIN
-Genome-wide detection of human intronic AG-gain variants between the splicing branchpoint and canonical acceptor site
+Genome-wide detection of human intronic AG-gain variants between the splicing branchpoint and acceptor site
 
 ## Introduction
-- Human variants that introduce an AG in the intronic region between the branchpoint (BP) and the canonical acceptor site (ACC) of protein-coding genes can disrupt pre-mRNA splicing.
+- Human variants that introduce an AG in the intronic region between the branchpoint (BP) and the canonical splice acceptor site (ACC) of protein-coding genes can disrupt pre-mRNA splicing.
 
-- Based on our previously developed BPHunter method ([github](https://github.com/casanova-lab/BPHunter) and [webserver](https://hgidsoft.rockefeller.edu/BPHunter)), we precisely delineate the BP-ACC segments of all human introns, for the first time. We find an extreme depletion of AG/YAG in the [BP+8, ACC-4] region. 
+- Based on our previously developed BPHunter ([github](https://github.com/casanova-lab/BPHunter) and [webserver](https://hgidsoft.rockefeller.edu/BPHunter)), we precisely delineate the BP-ACC segments of all human introns, for the first time. We find an extreme depletion of AG/YAG in the [BP+8, ACC-4] region. 
 
 - AGAIN is a genome-wide approach to pinpoint intronic AG-gain variants (SNVs, insertions, deletions) in the BP-ACC region of human genomes. AGAIN also predicts protein-level outcomes resulting from two major missplicing consequences (new acceptor site & complete exon skipping).
 
-- This standalone version can be easily implemented into NGS analysis by a one-line command. We also provided the [AGAIN webserver](http://hgidsoft.rockefeller.edu/AGAIN) with user-friendly interface.
+- This standalone version can be implemented into NGS analysis by a one-line command. We also provide the [AGAIN webserver](http://hgidsoft.rockefeller.edu/AGAIN) with a user-friendly interface.
 
 ## News
-- Feb 2023: AGAIN webserver & github was launched.
+- Feb 2023: AGAIN webserver & GitHub was launched.
 - Sep 2022: AGAIN prototype was completed.
-- Jan 2022: Inspired by BPHunter study, AGAIN idea was conceived.
+- Jan 2022: Inspired by the BPHunter study, AGAIN idea was conceived.
 
 ## Usage 
 Current version: version-1
@@ -21,7 +21,7 @@ Current version: version-1
 The code is written in [python3](https://www.python.org/downloads/), and requires [bedtools](https://bedtools.readthedocs.io/en/latest/) installed.
 
 ### Reference datasets
-Due to the file size limit in GitHub, please download the [AGAIN reference datasets](http://hgidsoft.rockefeller.edu/AGAIN/standalone.html) and put them into your AGAIN folder.
+Due to the data limit in GitHub, please download the [AGAIN reference datasets](http://hgidsoft.rockefeller.edu/AGAIN/standalone.html) and put them into your AGAIN folder.
 
 ### File Format
 **Input:** Variants in VCF format, with 5 mandatory and tab-delimited fields (CHROM, POS, ID, REF, ALT), (Example_var_AGgain.vcf)
@@ -38,20 +38,20 @@ Due to the file size limit in GitHub, please download the [AGAIN reference datas
   - AGAIN_YAG: YES/NO, if the AG-gain variant also fits YAG
   - AGAIN_BP_DIST: the distance from the created AG to BP
   - AGAIN_ACC_DIST: the distance from the created AG to ACC
-  - AGAIN_HIGHRISK: YES/NO, if the AG-gain variant falls inside high-risk [BP+8, ACC-4] region
+  - AGAIN_HIGHRISK: YES/NO, if the AG-gain variant falls inside the high-risk [BP+8, ACC-4] region
   - AGAIN_SCORE: score of the AG-gain variant (suggested cutoff >= 3, max = 5)
   - PROT_SEQ_WT: wild-type protein sequence
-  - PROT_SEQ_NEW_ACC: consequent protein sequence if new acceptor site is created
-  - HGVS_NEW_ACC: protein-level HGVS annotation if new acceptor site is created
+  - PROT_SEQ_NEW_ACC: consequent protein sequence if a new acceptor site is created
+  - HGVS_NEW_ACC: protein-level HGVS annotation if a new acceptor site is created
   - PROT_SEQ_EXON_SKIP: consequent protein sequence if exon skipping occurs
   - HGVS_EXON_SKIP: protein-level HGVS annotation if exon skipping occurs
 
 ### Command & Parameters (AGAIN_VCF.py)
 ```
-python AGAIN_VCF.py -i variants.vcf
+python AGAIN_VCF.py -i Sample_variants.vcf
 ```
 ```
-python AGAIN_VCF.py -i variants.vcf -g GRCh37 -t all
+python AGAIN_VCF.py -i Sample_variants.vcf -g GRCh37 -t all
 ```
 
 Parameter | Type | Description | Default
@@ -62,16 +62,16 @@ Parameter | Type | Description | Default
 
 ### Command & Parameters (AGAIN_VCF_batch.py)
 ```
-python AGAIN_VCF_batch.py -d /dir -s samplelist.txt -o output.txt
+python AGAIN_VCF_batch.py -d directory -s samplelist.txt -o output.txt
 ```
 ```
-python AGAIN_VCF_batch.py -d /dir -s samplelist.txt -o output.txt -g GRCh37 -t all
+python AGAIN_VCF_batch.py -d directory -s samplelist.txt -o output.txt -g GRCh37 -t all
 ```
 
 Parameter | Type | Description | Default
 ----------|------|-------------|--------------
 *-d*|str|directory of VCF files|N.A.
-*-s*|file|sample list (without .vcf extension) to be screened in the above directory|N.A.
+*-s*|file|sample list (without .vcf extension) in the above directory|N.A.
 *-o*|str|output filename|N.A.
 *-g*|str|human reference genome assembly (GRCh37 / GRCh38)|GRCh37
 *-t*|str|all / canonical transcripts?|all
@@ -80,7 +80,7 @@ Parameter | Type | Description | Default
 <img src="https://hgidsoft.rockefeller.edu/AGAIN/img/AGAIN_Scoring.jpg" width="33%" height="33%">
 
 ## Reference
-- ***Zhang P. et al.*** Genome-wide detection of human intronic AG-gain variants between the splicing branchpoint and canonical acceptor site. 2023.
+- ***Zhang P. et al.*** Genome-wide detection of human intronic AG-gain variants located between the splicing branchpoint and canonical splice acceptor site. 2023.
 
 ## Contact
 > **Developer:** Peng Zhang, Ph.D.
